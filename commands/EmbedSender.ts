@@ -23,7 +23,6 @@ export default class EmbedSender {
         const emberSenderModal = new EmbedSenderModal();
         const modal = await emberSenderModal.createModal();
         interaction.showModal(modal);
-        interaction.reply("正在開啟 Embed 訊息傳送器...");
     }
 
     async handleMessageSending(interaction: ModalSubmitInteraction) {

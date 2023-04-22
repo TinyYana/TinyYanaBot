@@ -1,0 +1,17 @@
+{
+  "name": "tinyyana",
+  "version": "1.0.0",
+  "description": "TinyYana's Discord Bot",
+  "main": "bot.ts",
+  "scripts": {
+    "test": "node bot.ts"
+  },
+  "author": "TinyYana",
+  "license": "MIT",
+  "dependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "discord.js": "^14.9.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}

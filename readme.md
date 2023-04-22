@@ -5,7 +5,7 @@ This is a Discord bot for the ACG community. It can be used for a variety of tas
 
 * Sending welcome messages to new members
 * Sending goodbye messages to members who leave
-* Managing voice channels
+* Dynamic voice channels
 * Sending embed messages
 
 ## Installation
@@ -17,12 +17,14 @@ This is a Discord bot for the ACG community. It can be used for a variety of tas
 - ts-node v10.9.1
 - @tsconfig/node18 v1.0.1
 
-## This bot currently provides the following features:
-- Dynamic voice channel
-- Embed Sender
-- Member welcome messages
-- Member exit messages
-- Member count update
+## Usage
+1. Create a token.json file and write the following content:
+```json
+{
+    "token": "Your token goes here."
+}
+```
+2. Run the `runBot.bat` file.
 
 ## License
 

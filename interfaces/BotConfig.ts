@@ -7,4 +7,7 @@ export interface BotConfig {
     memberCount: {
         memberCountChannelId: string;
     };
+    dynamicVoiceChannel: {
+        triggerChannelId: string
+    }
 }

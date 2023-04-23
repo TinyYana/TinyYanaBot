@@ -6,5 +6,8 @@
     },
     "memberCount": {
         "memberCountChannelId": "876124317891579914"
+    },
+    "dynamicVoiceChannel": {
+        "triggerChannelId": "1099238407588282478"
     }
 }

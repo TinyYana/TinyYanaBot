@@ -3,14 +3,19 @@ import Discord, {
     VoiceChannel,
     VoiceState,
 } from 'discord.js';
+import * as fs from "fs";
+import { BotConfig } from '../interfaces/BotConfig';
+
+const config: BotConfig = JSON.parse(fs.readFileSync('config.json', {
+    encoding: 'utf8'
+}));
 
 // The ID of the channel that triggers the creation of a new dynamic voice channel.
-const triggerChannelId = '1099238407588282478';
+const triggerChannelId = config.dynamicVoiceChannel.triggerChannelId;
 
-// 管理動態語音頻道的 Class
 export default class DynamicVoiceChannelManager {
 
-    // 創建新的動態語音頻道
+    // Create new dynamic voice channel.
     /**
     * @param {VoiceState} newState - The new state of the voice channel.
     */
@@ -33,7 +38,7 @@ export default class DynamicVoiceChannelManager {
                 MuteMembers: true,
                 DeafenMembers: true,
                 PrioritySpeaker: true,
-                ManageChannels: true,
+                ManageChannels: true
             }
         );
 

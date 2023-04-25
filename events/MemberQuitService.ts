@@ -8,13 +8,12 @@ const config: BotConfig = JSON.parse(fs.readFileSync('config.json', {
 
 export default class MemberQuitService {
     async sendQuitMessage(member: GuildMember | PartialGuildMember, guild: Guild): Promise<void> {
-        if (!member.partial) {
-            member = await guild.members.fetch(member);
-        }
         const quitMessage = `:wave: ${member.user.tag} 離開了彼岸花社群`;
         const quitMessageChannel = await guild.channels.fetch('859089963181670410');
         if (!quitMessageChannel?.isTextBased()) return;
-        quitMessageChannel.send(quitMessage);
+        quitMessageChannel.send({
+            content: quitMessage
+        });
     }
 
     async sendMemberCountMessage(guild: Guild) {
